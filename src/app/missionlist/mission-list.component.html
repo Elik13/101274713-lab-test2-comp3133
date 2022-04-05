@@ -1,0 +1,24 @@
+<mat-card *ngFor="let launch of launches | async" class="course-card mat-elevation-z10">
+  <mat-card-header>
+    <mat-card-title>{{launch.mission_name}}</mat-card-title>
+  </mat-card-header>
+  <!--    <img mat-card-image [src]="launch.iconUrl">-->
+  <mat-card-content>
+    <p>{{launch.launch_year}}</p>
+  </mat-card-content>
+  <mat-card-content>
+    <p>{{launch.details | json}}</p>
+  </mat-card-content>
+  <mat-card-content>
+    <div *ngFor="let link of launch.links">
+      <p>{{link.mission_patch_small}}</p>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="course-actions">
+    <app-view-mission-details button mat-button class="mat-raised-button mat-primary" [routerLink]="['/courses', launch.id]">
+      VIEW MISSION DETAILS
+    </app-view-mission-details>
+  </mat-card-actions>
+
+</mat-card>
