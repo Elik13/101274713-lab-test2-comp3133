@@ -12,7 +12,6 @@ import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MissionListComponent} from './missionlist/mission-list.component';
-// import {CourseComponent} from './course/course.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -23,13 +22,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {SpacexapiService} from './network/spacexapi.service';
 import {HttpClientModule} from '@angular/common/http';
+import {MissionDetailsComponent} from './missiondetails/mission-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    // CourseComponent,
+    MissionDetailsComponent,
     MissionListComponent
   ],
   imports: [

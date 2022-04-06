@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import {MissionDetailsComponent} from './missiondetails/mission-details.component';
 
 const routes: Routes = [
   {
@@ -12,13 +13,10 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
-  // {
-  //   path: 'courses/:id',
-  //   component: CourseComponent,
-  //   resolve: {
-  //     course: CourseResolver
-  //   }
-  // },
+  {
+    path: 'missions/:flightNumber',
+    component: MissionDetailsComponent
+  },
   {
     path: '**',
     redirectTo: '/'

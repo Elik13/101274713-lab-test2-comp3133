@@ -1,0 +1,57 @@
+<div class="course">
+
+  <h1>SpaceX mission details</h1>
+  <img src="{{(selectedMission | async).links.mission_patch_small}}" alt="mission patch">
+  <div>
+    <h2>Name: {{(selectedMission | async).mission_name}}</h2>
+    <div>
+      Launch year: {{(selectedMission | async).launch_year}}
+    </div>
+  </div>
+  <div>
+    <h2>Rocket</h2>
+    <div>
+      Name: {{(selectedMission | async).rocket?.rocket_name}}
+    </div>
+    <div>
+      Type: {{(selectedMission | async).rocket?.rocket_type}}
+    </div>
+  </div>
+  <div>
+    <h2>Launch site</h2>
+    <div>
+      Name: {{(selectedMission | async).launch_site?.site_name_long}}
+    </div>
+  </div>
+  <div>
+    <h2>Launch details</h2>
+    <div>
+      {{(selectedMission | async).details}}
+    </div>
+  </div>
+  <div>
+    <h2>More info on launch details</h2>
+    <a href="{{(selectedMission | async).links?.mission_patch_small}}">
+      <span class="material-icons">
+        text_snippet
+      </span>
+    </a>
+    <a href="{{(selectedMission | async).links?.article_link}}">
+      <span class="material-icons">
+        public
+      </span>
+    </a>
+    <a href="{{(selectedMission | async).links?.video_link}}">
+      <span class="material-icons">
+        play_arrow
+      </span>
+    </a>
+  </div>
+
+</div>
+
+
+
+
+
+

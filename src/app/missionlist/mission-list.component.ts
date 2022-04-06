@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Mission} from '../model/mission';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-mission-list',
@@ -12,7 +13,7 @@ export class MissionListComponent implements OnInit {
   @Input()
   launches: Observable<Mission[]>;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
